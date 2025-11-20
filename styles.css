@@ -30,7 +30,7 @@ body, html {
 /* NAVBAR */
 nav {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,6 @@ nav {
   color: #ffcc00;
 }
 
-/* MENU */
 nav ul {
   list-style: none;
   display: flex;
@@ -65,7 +64,7 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* MOBILE MENU BUTTON */
+/* MOBILE MENU ICON */
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -116,16 +115,18 @@ nav ul li a:hover {
     display: block;
   }
 
+  /* MOBILE MENU FIXED + CLEAN */
   nav ul {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     width: 100%;
     text-align: center;
     flex-direction: column;
     display: none;
     padding: 20px 0;
+    z-index: 999;
   }
 
   nav ul.show {
@@ -133,9 +134,10 @@ nav ul li a:hover {
   }
 
   nav ul li {
-    padding: 10px 0;
+    padding: 12px 0;
   }
 
+  /* TITLE FIX */
   .content h1 {
     font-size: 28px;
   }
