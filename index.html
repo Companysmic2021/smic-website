@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMIC | Shree Mahamai Infra Consultant Pvt. Limited Company</title>
 
-
   <style>
     body, html {
       margin: 0;
@@ -15,7 +14,7 @@
       color: white;
     }
 
-    /* NEW High-quality background */
+    /* HERO BACKGROUND */
     .hero {
       background-image: url('https://swarajya.gumlet.io/swarajya/2022-02/4d5e7bc0-c46a-4576-bb64-401b096280f8/swarajya_2021_12_923cde37_fb2f_4282_bef1_45bb8fe864f3_Mega_National_Highways_Project_1200x800.jpg?w=610&q=75&compress=true&format=auto');
       background-size: cover;
@@ -27,7 +26,6 @@
       flex-direction: column;
     }
 
-    /* Cleaner dark overlay */
     .overlay {
       position: absolute;
       top: 0;
@@ -37,7 +35,7 @@
       background: rgba(0, 0, 0, 0.65);
     }
 
-    /* Navigation Bar */
+    /* NAVBAR */
     nav {
       position: relative;
       z-index: 2;
@@ -49,42 +47,58 @@
       backdrop-filter: blur(5px);
     }
 
-    /* Premium-style logo */
     .logo {
       font-size: 30px;
       font-weight: 800;
-      letter-spacing: 1px;
       color: #ffcc00;
     }
 
-    nav a {
+    /* MENU */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
+      font-size: 18px;
       font-weight: 500;
-      font-size: 17px;
     }
-    nav a:hover { color: #ffcc00; }
 
-    /* Center Content */
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* MOBILE MENU BUTTON */
+    .menu-toggle {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* CENTER CONTENT */
     .content {
       position: relative;
       z-index: 2;
       margin-top: 12%;
       text-align: center;
+      padding: 0 20px;
     }
 
     .content h1 {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 900;
       line-height: 1.3;
-      letter-spacing: 1px;
     }
 
     .content p {
-      font-size: 21px;
+      font-size: 18px;
       margin-bottom: 30px;
-      opacity: 0.95;
     }
 
     .btn {
@@ -95,9 +109,56 @@
       border-radius: 6px;
       font-weight: 700;
       font-size: 18px;
-      transition: 0.3s;
     }
+
     .btn:hover { background: #e6b800; }
+
+
+
+    /* ========== RESPONSIVE CSS ========== */
+
+    @media (max-width: 768px) {
+
+      nav {
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        display: none;
+        padding: 20px 0;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        padding: 10px 0;
+      }
+
+      .content h1 {
+        font-size: 28px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+
+      .hero {
+        background-attachment: scroll;
+      }
+    }
   </style>
 </head>
 
@@ -106,27 +167,28 @@
   <div class="hero">
     <div class="overlay"></div>
 
-   <nav class="navbar">
-    <div class="logo">SMIC</div>
+    <!-- NAV -->
+    <nav>
+      <div class="logo">SMIC</div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-    </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-    <ul id="menuList">
+      <ul id="menuList">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="help.html">Help</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
 
-<script>
-function toggleMenu() {
-    document.getElementById("menuList").classList.toggle("show");
-}
-</script>
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+      function toggleMenu() {
+        document.getElementById("menuList").classList.toggle("show");
+      }
+    </script>
 
+    <!-- MAIN TEXT -->
     <div class="content">
       <h1>SHREE MAHAMAI INFRA CONSULTANT<br>PRIVATE LIMITED COMPANY</h1>
       <p>All Engineering Solutions and Quality Consulting</p>
@@ -136,6 +198,4 @@ function toggleMenu() {
   </div>
 
 </body>
-
 </html>
-
