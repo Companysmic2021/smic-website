@@ -1,154 +1,150 @@
-/* Background */
-body {
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('https://w0.peakpx.com/wallpaper/724/95/HD-wallpaper-blue-abstract-simple-background-abstract-blue-simple-background.jpg');
-}
-
-/* Section layout */
-.services-section {
-  padding: 80px 100px;
-  backdrop-filter: blur(4px);
-}
-
-/* Header text */
-.header h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 42px;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-}
-
-/* Grid layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-/* Service card — glass box */
-.box {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 25px;
-  border-radius: 18px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  transition: 0.3s ease;
-}
-
-/* Hover effect */
-.box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-}
-
-/* Heading */
-.box h3 {
-  margin-bottom: 12px;
-  font-size: 22px;
-  color: #ffe082;
-  font-weight: 700;
-}
-
-/* Paragraph */
-.box p {
-  font-size: 16px;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
   color: white;
-  line-height: 1.5;
-
-/* MOBILE VIEW */
-@media (max-width: 768px) {
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    header {
-        height: auto;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .services {
-        padding: 20px;
-        grid-template-columns: 1fr;
-    }
-
-    .service-card {
-        margin-bottom: 20px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-    }
-}
-/* NAVBAR BASE */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
 }
 
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffcc00;
+/* HERO BACKGROUND */
+.hero {
+  background-image: url('https://swarajya.gumlet.io/swarajya/2022-02/4d5e7bc0-c46a-4576-bb64-401b096280f8/swarajya_2021_12_923cde37_fb2f_4282_bef1_45bb8fe864f3_Mega_National_Highways_Project_1200x800.jpg?w=610&q=75&compress=true&format=auto');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.navbar ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
 }
 
-.navbar ul li a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
+/* NAVBAR */
+nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
 }
 
-/* HAMBURGER ICON */
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffcc00;
+}
+
+/* MENU */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* MOBILE MENU BUTTON */
 .menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
 }
 
-/* MOBILE VIEW */
+/* CENTER CONTENT */
+.content {
+  position: relative;
+  z-index: 2;
+  margin-top: 12%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 14px 32px;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.btn:hover { background: #e6b800; }
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
 
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.85);
-        width: 100%;
-        margin-top: 10px;
-        padding: 10px 0;
-        text-align: center;
-        gap: 15px;
-    }
+  nav {
+    padding: 15px 20px;
+  }
 
-    .navbar ul.show {
-        display: flex;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
 }
