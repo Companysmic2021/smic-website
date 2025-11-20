@@ -1,129 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMIC - Shree Mahamai Infra Consultant Pvt Ltd</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMIC | Shree Mahamai Infra Consultant Pvt. Limited Company</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100%;
+      color: white;
+    }
 
-        /* NAVBAR */
-        .navbar {
-            background: #111;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Hero Section */
+    .hero {
+      background-image: url('https://swarajya.gumlet.io/swarajya/2022-02/4d5e7bc0-c46a-4576-bb64-401b096280f8/swarajya_2021_12_923cde37_fb2f_4282_bef1_45bb8fe864f3_Mega_National_Highways_Project_1200x800.jpg?w=610&q=75&compress=true&format=auto');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .navbar h2 {
-            margin: 0;
-            color: #ffd700;
-        }
+    /* remove fixed attachment on mobile */
+    @media (min-width: 768px) {
+      .hero {
+        background-attachment: fixed;
+      }
+    }
 
-        .menu-icon {
-            font-size: 28px;
-            cursor: pointer;
-        }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+    }
 
-        /* HERO SECTION */
-        .hero {
-            background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=60')
-                center/cover no-repeat;
-            padding: 150px 25px;
-            text-align: center;
-            color: white;
-        }
+    /* Navigation Bar */
+    nav {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+    }
 
-        .hero h1 {
-            font-size: 32px;
-            font-weight: 900;
-            margin: 0 0 15px;
-        }
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffcc00;
+    }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 500;
+      font-size: 16px;
+    }
 
-        .btn {
-            background: #ffd700;
-            padding: 14px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav a:hover {
+      color: #ffcc00;
+    }
 
-        /* SERVICES */
-        #services {
-            padding: 50px 20px;
-            text-align: center;
-        }
+    /* Center Content */
+    .content {
+      position: relative;
+      z-index: 2;
+      margin-top: 20%;
+      text-align: center;
+      padding: 0 15px;
+    }
 
-        .service-box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 15px 0;
-        }
+    .content h1 {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1.3;
+    }
 
-        /* FOOTER */
-        .footer {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
+    .content p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
 
-    </style>
+    .btn {
+      padding: 12px 28px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e6b800;
+    }
+
+    /* ---------- MOBILE RESPONSIVE FIXES ---------- */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 15px;
+      }
+
+      .content {
+        margin-top: 35%;
+      }
+
+      .content h1 {
+        font-size: 28px;
+      }
+
+      .content p {
+        font-size: 16px;
+      }
+
+      .btn {
+        font-size: 15px;
+        padding: 10px 24px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <h2>SMIC</h2>
-        <div class="menu-icon">☰</div>
+  <div class="hero">
+    <div class="overlay"></div>
+
+    <nav>
+      <div class="logo">SMIC</div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <h1>SHREE MAHAMAI INFRA CONSULTANT<br>PRIVATE LIMITED COMPANY</h1>
+      <p>All Engineering Solutions and Quality Consulting</p>
+      <a class="btn" href="services.html">Explore Services</a>
     </div>
 
-    <!-- HERO CLEANED (NO HOME, NO SERVICES, NO HELP, NO CONTACT TEXT) -->
-    <section class="hero">
-        <h1>SHREE MAHAMAI INFRA CONSULTANT<br>PRIVATE LIMITED COMPANY</h1>
-        <p>All Engineering Solutions and Quality Consulting</p>
-        <a href="#services" class="btn">Explore Services</a>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services">
-        <h2>Our Services</h2>
-
-        <div class="service-box">
-            <h3>Road Safety Audit</h3>
-            <p>Professional RSA services for highways & road projects.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Quality Monitoring</h3>
-            <p>Complete quality inspection for construction projects.</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Engineering Consultancy</h3>
-            <p>Technical guidance for infra and road engineering works.</p>
-        </div>
-    </section>
-
-    <div class="footer">
-        © 2025 Shree Mahamai Infra Consultant Pvt Ltd
-    </div>
+  </div>
 
 </body>
 </html>
