@@ -57,3 +57,41 @@ body {
   font-size: 16px;
   color: white;
   line-height: 1.5;
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    header {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
